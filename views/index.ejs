@@ -13,27 +13,50 @@
     </head>
 
     <body>
-        <h1>Study Materials</h1>
-        <p>
-            Hello! Welcome, my name is Huy. I would like to share my study materials with you.<br>
-            I use quizlet as a flashcard tool to study most of the difficult subjects in school.<br>
-            Here is the link: <a href="https://quizlet.com/Pham__Huy/sets">https://quizlet.com/Pham__Huy/sets</a><br>
-        </p>
-        <p>
-            <ul>
-                <% for (const [subjectName, subjectList] of Object.entries(content)) {%>
-                    <h3><%=subjectName%></h3>
-                    <%for (const [author, authorList] of Object.entries(subjectList)) {%>
-                        <h4>With best regards and respect, made by <%=author%>.</h4>
-                        <%for (const [chapter, chapterList] of Object.entries(authorList)) {%>
-                            <h5>Chapter <%=chapter%></h5>
-                            <%for (const [lesson, lessonLink] of Object.entries(chapterList)) {%>
-                                <li>Key#<%=lesson%>: <a target="_blank" href="<%=lessonLink%>"><%=lessonLink%></a></li>
+        <nav>
+            <div id="content-list">
+                <ul id="nav-list">
+                    <li><a href="#home">Study Materials</a></li>
+                    <% for (const [subjectName, subjectList] of Object.entries(content)) { %>
+                        <li><a href="#<%=subjectName%>"><%=subjectName%></a></li>
+                        <ul>
+                            <% for (const [author, authorList] of Object.entries(subjectList)) { %>
+                                <li>
+                                    <a href="#<%=subjectName%>: <%=author%>"><%= author %></a>
+                                </li>
+                            <% } %>
+                        </ul>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- &#9776; is a unicode -->
+            <span id="navbton">&#9776;</span>
+        </nav>
+
+        <div id="main">
+            <h1 id="home">Study Materials</h1>
+            <p>
+                Hello! Welcome, my name is Huy. I would like to share my study materials with you.<br>
+                I use quizlet as a flashcard tool to study most of the difficult subjects in school.<br>
+                Here is the link: <a href="https://quizlet.com/Pham__Huy/sets">https://quizlet.com/Pham__Huy/sets</a><br>
+            </p>
+            <p>
+                <ul>
+                    <% for (const [subjectName, subjectList] of Object.entries(content)) {%>
+                        <h3 id="%=subjectName%"><%=subjectName%></h3>
+                        <%for (const [author, authorList] of Object.entries(subjectList)) {%>
+                            <h4 id="<%=subjectName%>: <%=author%>">With best regards and respect, made by <%=author%>.</h4>
+                            <%for (const [chapter, chapterList] of Object.entries(authorList)) {%>
+                                <h5>Chapter <%=chapter%></h5>
+                                <%for (const [lesson, lessonLink] of Object.entries(chapterList)) {%>
+                                    <li>Key#<%=lesson%>: <a target="_blank" href="<%=lessonLink%>"><%=lessonLink%></a></li>
+                                <%}%>
                             <%}%>
                         <%}%>
                     <%}%>
-                <%}%>
-            </ul>
-        </p>
+                </ul>
+            </p>
+        </div>
+        <script src="js/navbar.js" type="text/javascript"></script>
     </body>
 </html>
