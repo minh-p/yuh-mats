@@ -10,8 +10,8 @@
     "APHUG",
     "quizlets"
   ],
-  "author": "hmp",
-  "license": "ISC",
+  "author": "Vu Huy Minh Pham",
+  "license": "MIT",
   "engines": {
     "node": "17.7.1"
   },
