@@ -8,6 +8,8 @@ var app = express();
 app.use('/js', express.static(path.join(__dirname, "public/js")));
 app.use('/css', express.static(path.join(__dirname, "public/css")));
 
+app.locals.content = require("./data-json/content.json");
+
 // set up views (pages)
 app.set("views", "./views");
 app.set("view engine", "ejs");
