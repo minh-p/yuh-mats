@@ -43,7 +43,7 @@
             <p>
                 <ul>
                     <% for (const [subjectName, subjectList] of Object.entries(content)) {%>
-                        <h3 id="%=subjectName%"><%=subjectName%></h3>
+                        <h3 id="<%=subjectName%>"><%=subjectName%></h3>
                         <%for (const [author, authorList] of Object.entries(subjectList)) {%>
                             <h4 id="<%=subjectName%>: <%=author%>">With best regards and respect, made by <%=author%>.</h4>
                             <%for (const [chapter, chapterList] of Object.entries(authorList)) {%>
