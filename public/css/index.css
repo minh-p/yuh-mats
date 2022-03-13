@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap');
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #9FA9B8;
-    color: black;
-    font-family: 'Smooch Sans', sans-serif;
+  background-color: #9FA9B8;
+  color: black;
+  font-family: 'Smooch Sans', sans-serif;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
 a:hover {
-    color: blue;
+  color: blue;
 }
 
 /* nav bar appearance */
