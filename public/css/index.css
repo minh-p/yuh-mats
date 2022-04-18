@@ -10,6 +10,10 @@ body {
   font-family: 'Smooch Sans', sans-serif;
 }
 
+#navbton {
+  color: white;
+}
+
 a {
   color: black;
 }
@@ -29,6 +33,16 @@ a:hover {
   overflow-x: hidden; /* disable horizontal scrolling in the x axis. */
   padding-top: 30px; /* stay 30 pixel from the top for the content, this is padding */
   transition: 0.5s; /* transition in 0.5 seconds */
+  background-color: #192424;
+  color: black;
+}
+
+#content-list a {
+  color: white;
+}
+
+#content-list a:hover {
+  color: #38D3A8;
 }
 
 #content-list ul {
@@ -46,15 +60,6 @@ a:hover {
   font-size: 20px;
   display: block;
   transition: 0.3s;
-}
-
-/* Position and style the close button (top right corner) */
-#content-list .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -77,10 +82,16 @@ a:hover {
 }
 
 #main {
-  padding-left: 30px;
+  padding-left: 10vw;
   padding-top: 5px;
+  font-size: 22px;
 }
 
 #main h1 {
   margin-top: 0;
+}
+
+#main ul {
+  list-style-type: none;
+  padding-left: 0;
 }

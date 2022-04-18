@@ -7,6 +7,8 @@ const contentList = document.getElementById("content-list");
 const mainDiv = document.getElementById("main");
 const body = document.getElementById("body");
 
+openNav();
+
 contentList.style["border-right"] = "3px solid black";
 
 document.getElementById("navbton").onclick = () => {
