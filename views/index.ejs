@@ -51,7 +51,7 @@
                             <%for (const [chapter, chapterList] of Object.entries(authorList)) {%>
                                 <h5>Chapter <%=chapter%></h5>
                                 <%for (const [lesson, lessonLink] of Object.entries(chapterList)) {%>
-                                    <li>Key#<%=lesson%>: <a target="_blank" href="<%=lessonLink%>"><%=lessonLink%></a></li>
+                                    <li><%=lesson%>: <a target="_blank" href="<%=lessonLink%>"><%=lessonLink%></a></li>
                                 <%}%>
                             <%}%>
                         <%}%>
